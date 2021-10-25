@@ -1,6 +1,4 @@
-﻿USE KeyboardDb;
-
-PRINT N'Populating all of the lookup tables.';
+﻿PRINT N'Populating all of the lookup tables.';
 :r .\SeedBrands.sql
 GO
 
