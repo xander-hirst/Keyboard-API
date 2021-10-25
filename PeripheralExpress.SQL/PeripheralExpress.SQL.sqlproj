@@ -63,14 +63,27 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\tables\Keyboards.sql" />
-    <Build Include="dbo\tables\KeyboardType.sql" />
+    <Build Include="dbo\tables\Brand.sql" />
+    <Build Include="dbo\tables\KeyStyle.sql" />
+    <Build Include="dbo\tables\KeyLayout.sql" />
+    <Build Include="dbo\tables\KeyboardSize.sql" />
+    <Build Include="dbo\tables\Switch_Type.sql" />
+    <Build Include="dbo\tables\Cherry_Switch.sql" />
+    <Build Include="dbo\tables\Connection_Type.sql" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="dbo\scripts\postdeploy\SeedKeyboardTypes.sql" />
     <None Include="dbo\scripts\postdeploy\PostDeployment.sql" />
+    <None Include="dbo\scripts\postdeploy\SeedSwitchTypes.sql" />
+    <None Include="dbo\tables\CreateSchema.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PeripheralExpress.SQL.publish.xml" />
     <None Include="KeyboardDb.SQL.publish.xml" />
+    <None Include="dbo\scripts\postdeploy\SeedBrands.sql" />
+    <None Include="dbo\scripts\postdeploy\SeedCherrySwitches.sql" />
+    <None Include="dbo\scripts\postdeploy\SeedConnectionTypes.sql" />
+    <None Include="dbo\scripts\postdeploy\SeedKeyboardSize.sql" />
+    <None Include="dbo\scripts\postdeploy\SeedKeyLayout.sql" />
+    <None Include="dbo\scripts\postdeploy\SeedKeyStyles.sql" />
   </ItemGroup>
 </Project>
