@@ -72,9 +72,9 @@
     <Build Include="dbo\tables\Connection_Type.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="dbo\scripts\postdeploy\PostDeployment.sql">
+    <PostDeploy Include="dbo\scripts\postdeploy\PostDeployment.sql">
       <CopyToOutputDirectory>DoNotCopy</CopyToOutputDirectory>
-    </None>
+    </PostDeploy>
     <None Include="dbo\scripts\postdeploy\SeedSwitchTypes.sql" />
     <None Include="dbo\tables\CreateSchema.sql" />
   </ItemGroup>
@@ -82,7 +82,7 @@
     <None Include="PeripheralExpress.SQL.publish.xml" />
     <None Include="KeyboardDb.SQL.publish.xml" />
     <None Include="dbo\scripts\postdeploy\SeedBrands.sql" />
-    <PostDeploy Include="dbo\scripts\postdeploy\SeedCherrySwitches.sql" />
+    <None Include="dbo\scripts\postdeploy\SeedCherrySwitches.sql" />
     <None Include="dbo\scripts\postdeploy\SeedConnectionTypes.sql" />
     <None Include="dbo\scripts\postdeploy\SeedKeyboardSize.sql" />
     <None Include="dbo\scripts\postdeploy\SeedKeyLayout.sql" />
