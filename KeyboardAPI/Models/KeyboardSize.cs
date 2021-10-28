@@ -9,13 +9,13 @@ namespace KeyboardAPI.Models
     {
         public KeyboardSize()
         {
-            Keyboards = new HashSet<Keyboard>();
+            //Keyboards = new HashSet<Keyboard>();
         }
 
-        public int KeyboardSizeId { get; set; }
+        public int Id { get; set; }
         public string Size { get; set; }
         public int NumKeys { get; set; }
 
-        public virtual ICollection<Keyboard> Keyboards { get; set; }
+        //public virtual ICollection<Keyboard> Keyboards { get; set; }
     }
 }

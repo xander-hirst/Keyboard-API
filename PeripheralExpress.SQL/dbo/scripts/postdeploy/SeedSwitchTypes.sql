@@ -1,13 +1,13 @@
-﻿DECLARE @TotalSwitchTypes INT
+﻿DECLARE @TotalSwitchMechanisms INT
 
-SELECT @TotalSwitchTypes = count([Switch_Type_Id]) from [Switch_Type];
+SELECT @TotalSwitchMechanisms = count([Id]) from [SwitchMechanism];
 
-IF @TotalSwitchTypes = 0
-    INSERT INTO [Switch_Type] ([Type])
+IF @TotalSwitchMechanisms = 0
+    INSERT INTO [SwitchMechanism] ([Mechanism])
     VALUES
     ('Cherry MX'),
     ('Rubber Dome'),
     ('Buckling Spring');
 
-ELSE PRINT N'SwitchTypes already populated';
+ELSE PRINT N'SwitchMechanism already populated';
 GO

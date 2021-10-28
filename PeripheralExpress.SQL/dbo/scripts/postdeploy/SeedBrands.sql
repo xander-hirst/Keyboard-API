@@ -1,6 +1,6 @@
 ﻿DECLARE @TotalBrands INT
 
-SELECT @TotalBrands = count(Brand_Id) from [Brand];
+SELECT @TotalBrands = count(Id) from [Brand];
 
 IF @TotalBrands = 0
     INSERT INTO [Brand]([Name])

@@ -1,14 +1,14 @@
-﻿DECLARE @TotalKeyLayouts INT
+﻿DECLARE @TotalKeyboardDesigns INT
 
-SELECT @TotalKeyLayouts = count([KeyLayout_Id]) from [KeyLayout];
+SELECT @TotalKeyboardDesigns = count([Id]) from [KeyboardDesign];
 
-IF @TotalKeyLayouts = 0
-    INSERT INTO [KeyLayout] ([Layout])
+IF @TotalKeyboardDesigns = 0
+    INSERT INTO [KeyboardDesign] ([Layout])
     VALUES
     ('QWERTY'),
     ('Dvorak'),
     ('Colemak'), 
     ('QWERTY Ergonomic');
 
-ELSE PRINT N'KeyLayouts already populated';
+ELSE PRINT N'KeyboardDesigns already populated';
 GO

@@ -5,17 +5,15 @@ using System.Collections.Generic;
 
 namespace KeyboardAPI.Models
 {
-    public partial class ConnectionType
+    public partial class SwitchMechanism
     {
-        public ConnectionType()
+        public SwitchMechanism()
         {
             //Keyboards = new HashSet<Keyboard>();
         }
 
         public int Id { get; set; }
-        public string Type { get; set; }
-        public bool HasUsb { get; set; }
-        public bool IsWireless { get; set; }
+        public string Mechanism { get; set; }
 
         //public virtual ICollection<Keyboard> Keyboards { get; set; }
     }

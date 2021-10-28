@@ -1,6 +1,6 @@
 ﻿DECLARE @TotalKeyboardSize INT
 
-SELECT @TotalKeyboardSize = count([KeyboardSize_Id]) from [KeyboardSize];
+SELECT @TotalKeyboardSize = count([Id]) from [KeyboardSize];
 
 IF @TotalKeyboardSize = 0
     INSERT INTO [KeyboardSize] ([Size], [NumKeys])

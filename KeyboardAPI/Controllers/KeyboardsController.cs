@@ -24,14 +24,31 @@ namespace KeyboardAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Keyboard>>> GetKeyboards()
         {
-            return await _context.Keyboards.ToListAsync();
+            return await _context.Keyboards
+                .Include("Brand")
+                .Include("ConnectionType")
+                .Include("KeyLayout")
+                .Include("KeyboardDesign")
+                .Include("KeyboardSize")
+                .Include("MechanicalSwitchColorNavigation")
+                .Include("SwitchMechanism")
+                .ToListAsync();
         }
-
+         
         // GET: api/Keyboards/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Keyboard>> GetKeyboard(int id)
         {
-            var keyboard = await _context.Keyboards.FindAsync(id);
+            var keyboard = await _context.Keyboards
+                .Include("Brand")
+                .Include("ConnectionType")
+                .Include("KeyLayout")
+                .Include("KeyboardDesign")
+                .Include("KeyboardSize")
+                .Include("MechanicalSwitchColorNavigation")
+                .Include("SwitchMechanism")
+                .Where(k => k.Id == id)
+                .FirstOrDefaultAsync();
 
             if (keyboard == null)
             {

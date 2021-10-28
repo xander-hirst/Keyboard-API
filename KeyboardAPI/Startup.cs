@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using KeyboardAPI.Models;
 
 namespace KeyboardAPI
 {
@@ -32,7 +33,10 @@ namespace KeyboardAPI
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "KeyboardAPI", Version = "v1" });
             });
+            services.AddDbContext<KeyboardDbContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("KeyboardDb")));
+            services.AddScoped<DbContext, KeyboardDbContext>();
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

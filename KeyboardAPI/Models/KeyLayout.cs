@@ -9,12 +9,12 @@ namespace KeyboardAPI.Models
     {
         public KeyLayout()
         {
-            Keyboards = new HashSet<Keyboard>();
+            /*Keyboards = new HashSet<Keyboard>();*/
         }
 
-        public int KeyLayoutId { get; set; }
-        public string Layout { get; set; }
+        public int Id { get; set; }
+        public string Style { get; set; }
 
-        public virtual ICollection<Keyboard> Keyboards { get; set; }
+        //public virtual ICollection<Keyboard> Keyboards { get; set; }
     }
 }

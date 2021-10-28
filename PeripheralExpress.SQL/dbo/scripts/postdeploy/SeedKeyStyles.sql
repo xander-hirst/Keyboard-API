@@ -1,9 +1,9 @@
-﻿DECLARE @TotalKeyStyles INT
+﻿DECLARE @TotalKeyLayouts INT
 
-SELECT @TotalKeyStyles = count([KeyStyle_Id]) from [KeyStyle];
+SELECT @TotalKeyLayouts = count(Id) from [KeyLayout];
 
-IF @TotalKeyStyles = 0
-    INSERT INTO [KeyStyle] ([Style])
+IF @TotalKeyLayouts = 0
+    INSERT INTO [KeyLayout] ([Style])
     VALUES
     ('ANSI'),
     ('ISO');

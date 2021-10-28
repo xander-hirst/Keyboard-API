@@ -5,18 +5,18 @@ using System.Collections.Generic;
 
 namespace KeyboardAPI.Models
 {
-    public partial class CherrySwitch
+    public partial class MechanicalSwitch
     {
-        public CherrySwitch()
+        public MechanicalSwitch()
         {
-            Keyboards = new HashSet<Keyboard>();
+            //Keyboards = new HashSet<Keyboard>();
         }
 
         public string Color { get; set; }
-        public string ActuatuationType { get; set; }
+        public string ActuationType { get; set; }
         public int ActuationForceInG { get; set; }
         public int BottomOutForceInG { get; set; }
 
-        public virtual ICollection<Keyboard> Keyboards { get; set; }
+        //public virtual ICollection<Keyboard> Keyboards { get; set; }
     }
 }

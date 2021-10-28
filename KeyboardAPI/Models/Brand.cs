@@ -9,12 +9,12 @@ namespace KeyboardAPI.Models
     {
         public Brand()
         {
-            Keyboards = new HashSet<Keyboard>();
+            //Keyboards = new HashSet<Keyboard>();
         }
 
-        public int BrandId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
 
-        public virtual ICollection<Keyboard> Keyboards { get; set; }
+        //public virtual ICollection<Keyboard> Keyboards { get; set; }
     }
 }

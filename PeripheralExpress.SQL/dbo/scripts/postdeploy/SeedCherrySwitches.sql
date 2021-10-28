@@ -1,9 +1,9 @@
-﻿DECLARE @TotalCherrySwitches INT
+﻿DECLARE @TotalMechanicalSwitches INT
 
-SELECT @TotalCherrySwitches = count([Color]) from [Cherry_Switch];
+SELECT @TotalMechanicalSwitches = count([Color]) from [MechanicalSwitch];
 
-IF @TotalCherrySwitches = 0
-    INSERT INTO [Cherry_Switch]
+IF @TotalMechanicalSwitches = 0
+    INSERT INTO [MechanicalSwitch]
     VALUES
     ('Red', 'Linear', 45, 75),
     ('Black', 'Linear', 60, 85),
@@ -12,5 +12,5 @@ IF @TotalCherrySwitches = 0
     ('Blue', 'Clicky', 60, 60),
     ('Green', 'Clicky', 80, 90);
 
-ELSE PRINT N'Cherry_Switches already populated';
+ELSE PRINT N'MechanicalSwitch already populated';
 GO

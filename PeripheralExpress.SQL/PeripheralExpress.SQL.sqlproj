@@ -64,19 +64,18 @@
   <ItemGroup>
     <Build Include="dbo\tables\Keyboards.sql" />
     <Build Include="dbo\tables\Brand.sql" />
-    <Build Include="dbo\tables\KeyStyle.sql" />
     <Build Include="dbo\tables\KeyLayout.sql" />
+    <Build Include="dbo\tables\KeyboardDesign.sql" />
     <Build Include="dbo\tables\KeyboardSize.sql" />
-    <Build Include="dbo\tables\Switch_Type.sql" />
-    <Build Include="dbo\tables\Cherry_Switch.sql" />
-    <Build Include="dbo\tables\Connection_Type.sql" />
+    <Build Include="dbo\tables\SwitchMechanism.sql" />
+    <Build Include="dbo\tables\MechanicalSwitch.sql" />
+    <Build Include="dbo\tables\ConnectionType.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="dbo\scripts\postdeploy\PostDeployment.sql">
       <CopyToOutputDirectory>DoNotCopy</CopyToOutputDirectory>
     </PostDeploy>
     <None Include="dbo\scripts\postdeploy\SeedSwitchTypes.sql" />
-    <None Include="dbo\tables\CreateSchema.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PeripheralExpress.SQL.publish.xml" />
